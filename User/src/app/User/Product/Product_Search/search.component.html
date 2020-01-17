@@ -1,0 +1,93 @@
+ <!-- <div id="div1" class="jumbotron text-center">
+        <h1>WishList</h1>
+        <p>Find All Your Wish At Lowest Price</p>
+        <form>
+          <div class="input-group">
+            <input [(ngModel)]="name" type="text" class="search-txt" size="120" placeholder="Enter something to find at best Price" required>
+            <div class="input-group-btn">
+              <button type="submit" (click) = 'onSearch()' class="btn btn-danger">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>  -->
+
+
+      <html>
+  <head>
+    <title>Awesome Search Box</title>
+    <link rel="stylesheet" href="/src/assets/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+    <body>
+    <div class="container h-100 thumbnail-center ">
+            <h1>WishList</h1>
+            <h4>Find All Your Wish At Lowest Price</h4>
+
+      <div class="d-flex justify-content-center h-100">
+
+         <div class="searchbar" >
+          <input type="text" name="search" class="search_input"  placeholder="Find Your Products At Best Price" [(ngModel)]="name" autocomplete="off" id="listSearch" required>
+          <a class="search_icon" (click)='onSearch()'><i class="fas fa-search"></i></a>
+
+          <!-- horizontal-row -->
+          <!-- <div id="div2" style="border-style: ridge; margin-top: 10px;"class="col-md-12" *ngFor="let product of products | filter:name">
+
+            <br>
+            <br>
+            <div class="col-md-4">
+               <div id="div_img" class="thumbnail"  style="width: 30%; height: 40%;"><img src="http://localhost:5000/{{product.image}}"  alt="" ></div>
+            </div>
+            
+              <div  class="col-md-6">
+              <div id="div_pname"><strong>{{product.product_name}}</strong></div>
+              <div id="div_vendor">Sold By:{{product.vendor_id}}</div>
+              <div id="div_desc">{{product.description}}</div>
+              <div id="div_price">₹{{product.price}}</div>
+            </div>
+            <div class="col-md-2">
+               <button  class="btn btn-primary" (click) = "onAddToCart(product.product_id)" ><i class="glyphicon glyphicon-shopping-cart"></i> Add To Cart</button>
+               <button style="margin-top: 10px;" (click)="onProductSelect(product.product_id)" class="btn btn-warning" > View Details</button>
+
+              </div>
+            <br>
+          </div> -->
+
+
+          <!-- <div class="col-mt-5"></div>
+          <div style="margin: 20px; border: solid; " class="col-md-5 mb-4" *ngFor="let product of products | filter:name">
+            <div class="card text-center">
+              <div class="card-body">
+                <div id="div_img" class="thumbnail"  style="width: 30%; height: 30%; margin-left: 150px;"><img src="http://localhost:5000/{{product.image}}"  alt="" ></div>
+                <div id="div_pname"><strong>{{product.product_name}}</strong></div>
+                <div id="div_vendor">Sold By:{{product.vendor_id}}</div>
+                <div id="div_price">₹{{product.price}}</div>
+                <button style="margin-top: 10px;" (click)="onProductSelect(product.product_id)" class="btn btn-warning" > View Details</button>
+
+              </div>
+
+            </div>
+          </div> -->
+
+
+
+
+<!-- grid style -->
+          <div style="margin-left: 100px;">
+            <div id="grid-div" class="col-md-3 movie" *ngFor="let product of products | filter:name">
+              <img src="http://localhost:5000/{{product.image}}" alt="" style="width: 150px; height: 250px;">
+              <div class="title">{{product.product_name}}</div>
+              <div id="div_vendor">Sold By:{{product.vendor_id}}</div>
+              <div id="div_price">₹{{product.price}}</div>
+              <button style="margin-top: 10px;" (click)="onProductSelect(product.product_id)" class="btn btn-warning" > View Details</button>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+</html>
+
+  <!-- <div >{{product.product_id}}</div> -->

@@ -1,0 +1,36 @@
+<h1>Customers</h1>
+<table class="table table-striped table bordered">
+<thead>
+    <tr>
+        <th>CUSTOMER ID</th>
+        <th>CUSTOMER NAME</th>
+        <th>EMAIL</th>
+        <th>AREA</th>
+        <th>STREET</th>
+        <th>CONTACT</th>
+        <th>CITY</th>
+        <th>PIN</th>
+        <th>STATE</th>
+        <th>COUNTRY</th>
+        <th>ACTION</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let customer of customers">
+        
+            <td>{{customer.customer_id}}</td>
+            <td>{{customer.customer_name}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.area}}</td>
+            <td>{{customer.street}}</td>
+            <td>{{customer.contact}}</td>
+            <td>{{customer.city}}</td>
+            <td>{{customer.pin}}</td>
+            <td>{{customer.state}}</td>
+            <td>{{customer.country}}</td>
+            <td>
+                <button (click)="deleteCustomer(customer.customer_id)" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i></button>
+            </td>
+            </tr>
+</tbody>
+</table>

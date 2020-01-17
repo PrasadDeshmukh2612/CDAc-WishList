@@ -1,0 +1,55 @@
+<div style="margin-top: 100px;" class="form container container-fluid center">
+
+    
+    <div class="rows">
+        <div class="col-md-2"></div>
+
+        <h3 style="font-size: 40px;">User Profile</h3>
+        
+        <div *ngFor="let customer of customers" class="col-md-4 list-group">
+
+
+            
+            <div style="margin-left: 65px;" class="rows">
+                <div style="margin-left: 100px;" class="form-group">
+
+                    <ul style="width: 20cm;">
+
+                        <li class="list-group-item"><label>Name      :</label>
+                            <label >{{customer.customer_name}}</label></li>
+                        <li class="list-group-item"><label>Email     :</label>
+                            <label >{{customer.email}}</label></li>
+                        <li class="list-group-item"><label >Area     :</label>
+                            <label >{{customer.area}}</label></li>
+                        <li class="list-group-item"><label >Street   :</label>
+                            <label >{{customer.street}}</label></li>
+                        <li class="list-group-item"><label >Contact  :</label>
+                            <label >{{customer.contact}}</label></li>
+                        <li class="list-group-item"><label >City     :</label>
+                            <label >{{customer.city}}</label></li>
+                        <li class="list-group-item"><label >Pin      :</label>
+                            <label >{{customer.pin}}</label></li>
+                        <li class="list-group-item"><label >State    :</label>
+                            <label >{{customer.state}}</label></li>
+                         <li class="list-group-item"><label >Country :</label>
+                            <label >{{customer.country}}</label></li>
+
+                            <a style="margin-top: 10px;" class="btn btn-primary pull-right" routerLink='/user-profile-edit'>Edit Profile</a> 
+                        </ul>
+
+                       
+
+                  </div>
+                    
+                    
+                </div>
+
+                <div class="rows">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+        </div>
+
+    </div>
+</div>

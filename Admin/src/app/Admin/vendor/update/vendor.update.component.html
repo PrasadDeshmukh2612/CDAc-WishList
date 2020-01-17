@@ -1,0 +1,20 @@
+<h1>Update Vendors</h1>
+
+<div class="col-md-12">
+  <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="">Vendor Name</label>
+            <input [(ngModel)]="vendor_name" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+
+                  <button (click)="updateVendor()" class="btn btn-success" routerLink="/vendor-list">Update Vendor</button>
+                  <a style="margin-left: 10px;" routerLink="/vendor-list" class="btn btn-danger">Cancel</a>
+                </div>
+        </div>
+              
+  </div> 
+</div>             

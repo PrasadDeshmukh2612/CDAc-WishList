@@ -1,0 +1,77 @@
+<h1>List Of Products</h1>
+<div class='col-md-12'>
+
+<div class="col-md-6">
+
+    <div class="row">
+        <label for="">Product Id</label>
+        <input [(ngModel)]="product_id" type="number" class="form-control">
+      </div>
+
+    <div class="row">
+      <label for="">Vendor</label>
+      <select [(ngModel)]="vendor_id" class="form-control">
+        <option
+          *ngFor="let vendor of vendors"
+          [value]="vendor.vendor_id">{{vendor.vendor_name}}</option>
+      </select>
+    </div>
+  </div>
+
+<div class="col-md-6">
+    <div class="row">
+      <label for="">Category</label>
+      <select [(ngModel)]="Category" class="form-control">
+        <option
+          *ngFor="let category of categories"
+          [value]="category.category_id">{{category.category_name}}</option>
+      </select>
+    </div>
+
+    <div class="row">
+        <label for="">Product Name</label>
+        <input [(ngModel)]="product_name" type="text" class="form-control">
+      </div>
+  </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <div>
+ 
+        <label for=""> Choose Image</label>
+        <input (change)="onSelectFile($event)" type="file" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Description</label>
+            <textarea [(ngModel)]="description" rows="5" class="form-control"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="row">
+          <label for="">Price</label>
+          <input [(ngModel)]="price" type="number" class="form-control">
+        </div>
+      </div>
+
+    <div class="col-md-6">
+        <div class="row">
+          <label for="">Quantity</label>
+          <input [(ngModel)]="quantity" type="number" class="form-control">
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <button style="margin-top: 10px;" (click)=onAddProduct() class="btn btn-success">Add Product</button>
+            <a style="margin-left: 10px; margin-top: 10px;" routerLink="/product-list" class="btn btn-danger">Cancel</a>
+        </div>
+    </div>
+</div>

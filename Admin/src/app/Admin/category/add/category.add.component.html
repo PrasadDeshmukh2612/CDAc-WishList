@@ -1,0 +1,19 @@
+
+
+<h1>Add Category</h1>
+<div class="form">
+    <div class="form-group">
+        <label for="">Category Id</label>
+        <input [(ngModel)]="category_id" type="number" class="form-control">
+      </div>
+    <div class="form-group">
+        <label for="">Category Name</label>
+        <input [(ngModel)]="category_name" type="text" class="form-control">
+      </div>
+      <div>
+        <label for=""> Choose Image</label>
+        <input (change)="onSelectFile($event)" type="file" class="form-control">
+      </div>
+      <button (click)="addCategory()" class="btn btn-success">Add</button>
+    <button  class="btn btn-danger" routerLink='/category-list'>Cancel</button>
+    </div>

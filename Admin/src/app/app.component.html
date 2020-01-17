@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin-WishList</title>
+  </head>
+
+  <body>
+ <nav class="navbar navbar-default"> 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a  class="navbar-brand" [routerLink]="['/admin-login']" 
+      routerLinkActive="router-link-active"  >WishList</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <div *ngIf="toRender()"> 
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/customer-list">CUSTOMERS</a></li> 
+        </ul>
+
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/vendor-list">VENDORS</a></li>
+        </ul>
+
+
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/category-list">CATEGORY</a></li>
+        </ul>
+
+
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/product-list">PRODUCTS</a></li>
+        </ul>
+         
+          <!-- <li><a routerLink="/admin-register">REGISTER</a></li> -->
+      
+      </div>
+
+      <ul *ngIf="!toRender()" class="nav navbar-nav pull right">
+          <li><a (click)='onLogin()'><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+      </ul>
+
+      <ul *ngIf="toRender()" class="nav navbar-nav navbar-right">
+          <li><a (click)='onLogout()'>LOGOUT</a></li>
+      </ul>
+
+
+      </div>
+  </div>
+</nav>
+
+
+</body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>  
+
+</html>
+
+
+
+<!-- <app-list-vendor></app-list-vendor> -->
+
+<!-- <app-vendor-add></app-vendor-add> -->
+
+<!-- <app-list-category></app-list-category> -->
+
+<!-- <app-add-category></app-add-category> -->
+
+
+<!-- <app-user-login></app-user-login> -->
+<!-- <app-user-list></app-user-list> -->
+
+<!-- <app-user-register></app-user-register> -->
+
+<!--<app-user-home></app-user-home>-->
+<!-- <app-home-admin></app-home-admin> -->
+<!-- 
+ <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  
+  </div>   -->
+
+ <!-- <nav class="navbar navbar-inverse">  
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a [routerLink]="['/admin-home']" >Admin</a></li>
+      
+      </ul>
+    </div>
+  </nav> 
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    
+    </div>  -->

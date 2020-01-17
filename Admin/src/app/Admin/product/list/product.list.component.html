@@ -1,0 +1,53 @@
+<h1>List Of Products</h1>
+
+<a class="btn btn-primary pull-right product-add" routerLink='/product-add'>Add Products</a> 
+<!-- 
+<div>
+    <div class="col-md-3 product" *ngFor="let product of products">
+        <div class="product_id">{{product.product_id}}</div>
+        <div class="vendor_id">{{product.vendor_id}}</div>
+        <div class="category_id">{{product.category_id}}</div>
+        <div class="product_name">{{product.product_name}}</div>
+        <div class="description">{{product.description}}</div>
+        <div class="price">{{product.price}}</div>
+        <div class="quantity">{{product.quantity}}</div>
+        
+    </div>
+</div> -->
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Category Id</th>
+            <th>Vendor Id</th>
+            <th>Product Name</th>
+            <th>Image of Product</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.product_id}}</td>
+            <td>{{product.category_id}}</td>
+            <td>{{product.vendor_id}}</td>
+            <td>{{product.product_name}}</td>
+            <td><img src="http://localhost:5000/{{product.image}}" alt=""></td>
+
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>
+                <button style="margin: auto;" (click)="deleteProduct(product.product_id)" class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i></button>
+                <a style="margin: auto;" routerLink="/product-update/{{product.product_id}}" class="btn btn-warning" > <i class="glyphicon glyphicon-pencil"></i></a>
+
+            </td>
+        </tr>
+        
+
+    </tbody>
+</table>

@@ -1,0 +1,178 @@
+<!-- <app-user-home></app-user-home> -->
+<!-- <user-about-us></user-about-us> -->
+<!-- <user-contact-us></user-contact-us> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!-- 
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">WishList</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a routerLink="/user-home"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+        <li><a routerLink="/user-aboutUs">ABOUT</a></li>
+        <li><a routerLink="/user-contactUs">CONTACT</a></li>
+        <li><a routerLink="/user-search"><span class="glyphicon glyphicon-search"></span>SEARCH</a></li>
+        <li><a routerLink="/user-login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+        <li><a routerLink="/user-register"><span class="glyphicon glyphicon-user"></span> REGISTER</a></li>
+        <li><div style="color: #fff; margin-top: 18px; font-family: 'Courier New', Courier, monospace;">Welcome {{customer_name}}</div></li>
+
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+
+  <nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" [routerLink]="['/user-home']" routerLinkActive="router-link-active"
+          routerLinkActive="router-link-active">WishList</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div *ngIf="toRender()">
+
+          <ul class="nav navbar-nav">
+
+            <li><a routerLink="/user-home"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav ">
+
+            <li><a routerLink="/user-aboutUs">ABOUT</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav ">
+
+            <li><a routerLink="/user-contactUs">CONTACT</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav ">
+            <li><a routerLink="/user-search"><span class="glyphicon glyphicon-search"></span> SEARCH</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav ">
+            <li><a routerLink="/user-profile">Profile</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav ">
+            <li><a routerLink="/user-cart"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li>
+              <div style="color: #fff; margin-top: 18px; font-family: 'Courier New', Courier, monospace;">
+               <b> Welcome,{{customer_name}}</b></div>
+            </li>
+          </ul>
+
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a (click)='onLogout()'>LOGOUT </a></li>
+          </ul>
+
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <select name="" id="">
+              <option value="Hello"></option>
+            </select>
+
+          </ul> -->
+
+
+          <!-- <ul class="nav navbar-nav navbar-right">
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                style="color: #fff; font-family: 'Courier New', Courier, monospace;">{{customer_name}}
+                <span class="caret"></span>
+              </a>
+
+
+              <ul class="dropdown-menu">
+                <li><i class="glyphicon glyphicon-user"></i>Profile</li>
+                <li role="separator" class="divider"></li>
+                <li style="background: #303030;"><a (click)='onLogout()'>LOGOUT</a></li>
+              </ul>
+
+            </li>
+          </ul> -->
+
+
+
+
+        </div>
+
+        <div *ngIf=!toRender()>
+          <ul class="nav navbar-nav ">
+            <li><a routerLink="/user-home"><span class="glyphicon glyphicon-home"></span>HOME</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/user-aboutUs">ABOUT</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/user-contactUs">CONTACT</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a routerLink="/user-login"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/user-register"><span class="glyphicon glyphicon-user"></span> REGISTER</a></li>
+          </ul>
+
+          <!-- </ul> -->
+
+
+          <!-- </ul> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

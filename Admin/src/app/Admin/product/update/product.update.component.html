@@ -1,0 +1,64 @@
+<div class='col-md-12'>
+
+  <h1>Update Product Information</h1>
+    <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Vendor</label>
+          <select [(ngModel)]="Vendor_details" class="form-control">
+            <option
+              *ngFor="let Vendor_details of vendors"
+              [value]="Vendor_details.vendor_id">{{Vendor_details.vendor_name}}</option>
+          </select>
+        </div>
+      </div>
+    
+    <div class="col-md-6">
+        <div class="form-group">
+          <label for="">Category</label>
+          <select [(ngModel)]="Category" class="form-control">
+            <option
+              *ngFor="let Category of categories"
+              [value]="Category.category_id">{{Category.category_name}}</option>
+          </select>
+        </div>
+      </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="">Product Name</label>
+            <input [(ngModel)]="product_name" type="text" class="form-control">
+          </div>
+        </div>
+    </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="">Description</label>
+                <textarea [(ngModel)]="description" rows="5" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Price</label>
+              <input [(ngModel)]="price" type="number" class="form-control">
+            </div>
+          </div>
+    
+        <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Quantity</label>
+              <input [(ngModel)]="quantity" type="number" class="form-control">
+            </div>
+          </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <button (click)=updateProduct() class="btn btn-success" routerLink="/product-list">Update</button>
+                <a style="margin-left: 10px;" routerLink="/product-list" class="btn btn-danger">Cancel</a>
+            </div>
+        </div>
+    </div>

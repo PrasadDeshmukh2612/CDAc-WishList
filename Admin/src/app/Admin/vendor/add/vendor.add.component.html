@@ -1,0 +1,26 @@
+<h1>Add Vendors</h1>
+
+<div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="">Vendor Id</label>
+                <input [(ngModel)]="vendor_id" type="number" class="form-control">
+              </div>
+          <div class="form-group">
+            <label for="">Vendor Name</label>
+            <input [(ngModel)]="vendor_name" type="text" class="form-control">
+          </div>
+         
+          <div>
+            <label for=""> Choose Image</label>
+            <input (change)="onSelectFile($event)" type="file" class="form-control">
+          </div>
+        </div>
+      </div>
+        <div class="row">
+                <div class="col-md-12">
+                  <button (click)="addVendor()" class="btn btn-success">Add Vendor</button>
+                  <a style="margin-left: 10px;" routerLink="/vendor-list" class="btn btn-danger">Cancel</a>
+                </div>
+              </div>
+              

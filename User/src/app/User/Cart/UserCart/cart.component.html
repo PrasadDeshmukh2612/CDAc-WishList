@@ -1,0 +1,17 @@
+<h1>Cart</h1>
+
+
+
+ <div id="div2" style="border-style: ridge; margin-top: 10px;"class="col-md-12" >
+
+            
+              <div  class="col-md-6" *ngFor="let carts of cart">
+              <div id="div_pname"><strong>{{carts.product_name}}</strong></div>
+              <div id="div_price">₹{{carts.price}}</div>
+            </div>
+            <div class="col-md-2">
+               <button style="margin-top: 10px;"  class="btn btn-primary" > Place Order</button>
+
+              </div>
+            <br>
+          </div>

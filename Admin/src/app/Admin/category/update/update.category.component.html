@@ -1,0 +1,9 @@
+<h1>Update Category</h1>
+<div class="form">
+    <div class="form-group">
+        <label for="">Category Name</label>
+        <input [(ngModel)]="category_name" type="text" class="form-control">
+      </div>
+      <button (click)="updateCategory()"class="btn btn-success" routerLink='/category-list'>Update</button>
+    <button  class="btn btn-danger" routerLink='/category-list'>Cancel</button>
+    </div>

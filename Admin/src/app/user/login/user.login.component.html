@@ -1,0 +1,27 @@
+<h1>Login</h1>
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="login">
+  
+        <div class="form">
+          <div class="form-group">
+            <label for="">Email</label>
+            <input [(ngModel)]="email" type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input [(ngModel)]="password" type="password" class="form-control" placeholder="Enter Password">
+          </div>
+  
+          <div class="form-group">
+            <button (click)="onUserLogin()" class="btn btn-success">Login</button>
+            <a class="btn btn-warning pull-right" routerLink="/user-register">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  
